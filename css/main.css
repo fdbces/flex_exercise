@@ -1,3 +1,257 @@
-html {
- font-size: 18px;
+body {
+ font-family: Microsoft JhengHei, sans-serif;
+ font-size: 16x;
+}
+
+a {
+ text-decoration: none;
+}
+
+.wraper {
+ width: 1024px;
+ padding: 0 42px;
+ margin: 0 auto;
+}
+
+#header {
+ padding: 30px 0;
+ display: flex;
+ justify-content: space-between;
+}
+
+#header .logo {
+ line-height: 0;
+}
+
+#header .logo img {
+ height: 40px;
+}
+
+#header .nav {
+ display: flex;
+ align-items: center;
+}
+
+#header .nav li {
+ margin-right: 60px;
+
+}
+
+#header .nav li:last-child {
+ margin-right: 0;
+}
+
+#header .nav li a {
+ display: block;
+ color: #3F5D45;
+ font-weight: 600;
+ height: 100%;
+ transition: color .25s ease 0s;
+}
+
+#header .nav li:hover a {
+ color: #70da85;
+}
+
+#main-visual {
+ background: transparent url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/banner.png') 0% 0% no-repeat;
+ min-height: 496px;
+ margin-bottom: 60px;
+}
+
+#content {
+ display: flex;
+ justify-content: space-between;
+}
+
+.leftNav {
+ width: 300px;
+ margin-right: 20px;
+}
+
+.leftNav h2.navTitle {
+ font-size: 1.5em;
+ line-height: 1.667em;
+ font-weight: 600;
+ color: #EAF0ED;
+ background-color: #3F5D45;
+ padding: 15px;
+ text-align: center;
+}
+
+.leftNav li {
+ text-align: center;
+ /* border: 1px solid #EAF0ED; */
+ border-top: none;
+ /* transition: border .25s ease 0s; */
+}
+
+.leftNav li a {
+ display: block;
+ font-size: 1.5em;
+ line-height: 1.667em;
+ font-weight: 600;
+ color: #3F5D45;
+ background-color: #fff;
+ border: 1px solid #EAF0ED;
+ padding: 12px;
+ transition: color, background-color, border .25s ease 0s;
+}
+
+.leftNav li.selected a {
+ background-color: #EAF0ED;
+}
+
+.leftNav li:hover a {
+ color: #fff;
+ background-color: #3F5D45;
+ /* border: 1px solid #3F5D45; */
+}
+
+.rightContent {
+ width: calc(100% - 320px);
+}
+
+.itemWrap {
+ display: flex;
+ flex-wrap: wrap;
+ margin-bottom: 30px;
+}
+
+.item {
+ width: 300px;
+ margin-right: 20px;
+ margin-bottom: 20px;
+}
+
+.item:nth-child(2n) {
+ margin-right: 0;
+}
+
+.item .itemImg {
+ position: relative;
+}
+
+.item .itemImg .alertMsg {
+ position: absolute;
+ display: block;
+ background-color: #3F5D45;
+ padding: 5px 9px;
+ width: 30px;
+ top: 0;
+ left: 20px;
+ color: #fff;
+ font-size: 1em;
+ line-height: 1.250em;
+}
+
+.item .itemImg .icon-favorite {
+ position: absolute;
+ width: 20px;
+ height: 20px;
+ top: 19px;
+ right: 22px;
+ text-indent: -9999px;
+ background: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/favorite_border.png') no-repeat;
+}
+
+.item .item-info {
+ display: flex;
+}
+
+.item .item-info h3,
+.item .item-info span {
+ display: flex;
+ height: 100%;
+ font-size: 1.250em;
+ color: #3F5D45;
+ text-align: center;
+ border-left: 1px solid #EAF0ED;
+ border-right: 1px solid #EAF0ED;
+ align-items: center;
+ justify-content: center;
+ min-height: 56px;
+}
+
+.item .item-info h3 {
+ width: 173px;
+ font-weight: normal;
+ border-right: none;
+}
+
+.item .item-info span {
+ width: 127px;
+ font-weight: 600;
+}
+
+.item a.addcart {
+ display: block;
+ background-color: #EAF0ED;
+ text-align: center;
+ padding: 15px;
+ color: #3F5D45;
+ font-weight: 600;
+ font-size: 1.50em;
+ line-height: 1.250em;
+ transition: color, background-color .25s ease 0s;
+}
+
+.item a.addcart:hover {
+ cursor: pointer;
+ background-color: #3F5D45;
+ color: #EAF0ED;
+}
+
+.page-control {
+ margin-bottom: 60px;
+ display: flex;
+ justify-content: flex-end;
+}
+
+.page-control ul {
+ display: flex;
+}
+
+.page-control li {
+ border: 1px solid #EAF0ED;
+}
+
+.page-control li a {
+ display: block;
+ position: relative;
+ height: 60px;
+ width: 60px;
+ font-size: 1.250em;
+ line-height: 60px;
+ color: #3F5D45;
+ background-color: #fff;
+ text-align: center;
+ transition: color, background-color .25s ease 0s;
+}
+
+.page-control li.selected a,
+.page-control li:not(.next):not(.prev):hover a {
+ background-color: #3F5D45;
+ color: #fff;
+}
+
+.page-control li.prev a,
+.page-control li.next a {
+ text-indent: -9999px;
+}
+
+.page-control li.prev a:before,
+.page-control li.next a:before {
+ content: '';
+ position: absolute;
+ width: 24px;
+ height: 24px;
+ background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_left.png?raw=true) no-repeat;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+.page-control li.next a:before {
+ background: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/student-week1/arrow_right.png?raw=true) no-repeat;
 }
